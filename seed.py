@@ -13,7 +13,7 @@ from server import app
 def load_users():
     """Load users from u.user into database."""
 
-    print "Users"
+    print("Users")
 
     # Delete all rows in table, so if we need to run this a second time,
     # we won't be trying to add duplicate users
@@ -39,7 +39,7 @@ def load_users():
 def load_movies():
     """Load movies from u.item into database."""
 
-    print "Movies"
+    print("Movies")
 
     Movie.query.delete()
 
@@ -68,7 +68,7 @@ def load_movies():
 def load_ratings():
     """Load ratings from u.data into database."""
 
-    print "Ratings"
+    print("Ratings")
 
     Rating.query.delete()
 
