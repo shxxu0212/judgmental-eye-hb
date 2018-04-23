@@ -1,13 +1,12 @@
 """Movie Ratings."""
 
 from jinja2 import StrictUndefined
-
 from flask import (Flask, render_template, redirect, request, flash,
                    session)
-
 from flask_debugtoolbar import DebugToolbarExtension
-
 from model import User, Rating, Movie, connect_to_db, db
+
+# --------------------------------------------------------------- #
 
 app = Flask(__name__)
 
@@ -103,7 +102,7 @@ def movie_info(movie_id):
 
     BERATEMENT_MESSAGES = [
      "You don't disgust me, only mildly distasteful.",
-     "Roses are red, violets are blue.  Your movie taste sucks.",
+     "Roses are red, violets are blue. These movies suck, and so do you.",
      "Your taste in movies reminds me of Melania Trump's taste in men.",
      "I would rather watch paint dry, than a movie you like.",
      "I enjoy your opinion as much as I enjoy being poked in the eye slowly and repetitively."

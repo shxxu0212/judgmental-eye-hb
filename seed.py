@@ -8,6 +8,7 @@ from model import User, Movie, Rating
 from model import connect_to_db, db
 from server import app
 
+# --------------------------------------------------------------- #
 
 def load_users():
     """Load users from u.user into database."""
@@ -47,7 +48,7 @@ def load_movies():
             row = row.rstrip()
             movie_attributes = row.split("|")
             movie_id = movie_attributes[0]
-            title = movie_attributes[1][:-7].decode("latin-1")
+            title = movie_attributes[1][:-7]
             video_release = movie_attributes[2]
             if video_release:
                 video_release = datetime.datetime.strptime(video_release, "%d-%b-%Y")
